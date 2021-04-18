@@ -1,0 +1,43 @@
+Colaboradores
+	legajo #pk
+	inactivo (boolean)
+	fecha_baja
+
+Roles
+id_rol #pk au
+desc_rol
+inactivo (boolean)
+fecha_baja
+
+Clientes
+id_cliente #pk au
+desc_cliente
+inactivo (boolean)
+fecha_baja
+
+Proyectos
+	id_proyecto #pk au
+	desc_proyecto
+	id_cliente #fk
+
+Asignacion_proyecto
+	id_asig_proy #pk au
+	legajo #fk
+	id_proyecto #fk
+	id_rol #fk
+
+Asignacion_horas
+	id_asig_proy #fk #pk
+	fecha_asignacion #pk
+	día_trabajado #pk
+	cant_horas
+	
+	
+Liquidación_Mensual
+	id_proyecto #fk #pk
+	anio #pk
+	mes #pk
+	id_rol #fk #pk
+	Cant_horas
+	Fecha_Liquidación
+	Usuario_Liquidación
